@@ -6,7 +6,7 @@
 /*   By: mukhairu <mukhairu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 15:33:49 by mukhairu          #+#    #+#             */
-/*   Updated: 2023/11/30 21:39:47 by mukhairu         ###   ########.fr       */
+/*   Updated: 2023/12/04 21:40:59 by mukhairu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 PhoneBook::PhoneBook(/* args */)
 {
-	this->contIndex = 8;
+	this->index = 0;
 }
 
 PhoneBook::~PhoneBook()
@@ -31,15 +31,44 @@ void	PhoneBook::printWholeContacts(void)
 	}
 }
 
-void	PhoneBook::addContacts(Contact contact)
+void	PhoneBook::addContacts(void)
 {
-	if (this->contIndex == 8)
-		this->contIndex = 0;
-	this->contact[this->contIndex] = contact;
-	this->contIndex++;
+	Contact	contact;
+	if (this->index == 8)
+	{
+		this->index = 0;
+		return ;
+	}
+	this->contact[this->index] = contact;
+	this->index++;
 }
 
-string	getInput(string input)
+void	PhoneBook::addInput(void)
 {
-	
+	Contact *contact = &contact[index];
+	contact->setName("Name");
+	contact->setPhoneNumber("PhoneNumber");
+	contact->setEmailAddress("EmailAddress");
+	contact->setNotes("Notes");
+
+}
+
+string	checkInput(string message)
+{
+	std::string	str;
+
+	std::cout << "Enter " << message << std::endl;
+	std::cout << ">> ";
+	getline(std::cin, str);
+	while (str.empty())
+	{
+		std::cout << "Input is empty";
+		std::cout << ">> ";
+		getline(std::cin, str);
+	}
+	for (int i = 0; i < str.size(); i++)
+	{
+		if (isalpha(str[i]))
+			std::cout << "" << std::endl;
+	}
 }

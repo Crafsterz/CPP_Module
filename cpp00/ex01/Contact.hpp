@@ -6,7 +6,7 @@
 /*   By: mukhairu <mukhairu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 16:49:56 by mukhairu          #+#    #+#             */
-/*   Updated: 2023/11/30 17:43:29 by mukhairu         ###   ########.fr       */
+/*   Updated: 2023/12/04 19:11:05 by mukhairu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <string>
 using std::string;
 
-/*The class is used as a blueprint of the Oject*/
+/*The class is used as a blueprint of the Object*/
 class Contact
 {
 	private:
