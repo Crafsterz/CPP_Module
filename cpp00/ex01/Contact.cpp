@@ -19,9 +19,14 @@ Contact::Contact(/* args */)
 Contact::~Contact()
 {}
 
-std::string Contact::getName()
+std::string Contact::getFirstName()
 {
-	return (this->name);
+	return (this->firstName);
+}
+
+std::string Contact::getLastName()
+{
+	return (this->lastName);
 }
 
 std::string Contact::getPhoneNumber()
@@ -34,14 +39,14 @@ std::string Contact::getEmailAddress()
 	return (this->emailAddress);
  }
 
-std::string Contact::getNotes()
+void	Contact::setFirstName(string newFirstName)
 {
-	return (this->notes);
+	this->firstName = newFirstName;
 }
 
-void	Contact::setName(string newName)
+void	Contact::setLastName(string newLastName)
 {
-	this->name = newName;
+	this->lastName = newLastName;
 }
 
 void	Contact::setPhoneNumber(string newPhoneNum)
@@ -52,9 +57,4 @@ void	Contact::setPhoneNumber(string newPhoneNum)
 void	Contact::setEmailAddress(string newEmailAddr)
 {
 	this->emailAddress = newEmailAddr;
-}
-
-void	Contact::setNotes(string newNotes)
-{
-	this->notes = newNotes;
 }

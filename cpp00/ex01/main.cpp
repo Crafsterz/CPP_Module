@@ -22,13 +22,13 @@ int	main(void)
 	// PhoneBook	phonebook;
 
 	input = "";
-	while (input != "EXIT" && input !=  "exit")
+	while (input != "EXIT")
 	{
-		if (input == "ADD" && input == "add")
+		if (input == "ADD")
 			std::cout << "add" << std::endl;
 			//getInput
-		else if (input == "PRINT" && input == "print")
-			std::cout << "Print" << std::endl;
+		else if (input == "SEARCH")
+			std::cout << "search" << std::endl;
 			//printWholeContacts
 		else
 		{

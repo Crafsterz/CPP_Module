@@ -20,7 +20,8 @@ using std::string;
 class Contact
 {
 	private:
-		string name;
+		string firstName;
+		string lastName;
 		string phoneNumber;
 		string emailAddress;
 		string notes;
@@ -29,14 +30,14 @@ class Contact
 		Contact(void);
 		~Contact(void);
 
-		string	getName();
+		string	getFirstName();
+		string	getLastName();
 		string	getPhoneNumber();
 		string	getEmailAddress();
-		string	getNotes();
-		void	setName(string newName);
+		void	Contact::setFirstName(string newFirstName);
+		void	Contact::setLastName(string newLastName);
 		void	setPhoneNumber(string newPhoneNum);
 		void	setEmailAddress(string newEmailAddr);
-		void	setNotes(string newNotes);
 };
 
 
