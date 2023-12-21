@@ -24,11 +24,10 @@ void	PhoneBook::printWholeContacts(void)
 {
 	for (int i = 0; i < 8; i++)
 	{
-		std::cout << "Index: " << i << std::endl;
-		std::cout << "Name: " << contact[i].getFirstName() << std::endl;
-		std::cout << "Email Address: " << contact[i].getLastName() << std::endl;
-		std::cout << "Number: " << contact[i].getPhoneNumber() << std::endl;
-		std::cout << "Notes: " << contact[i].getDarkestSecret() << std::endl;
+		std::cout << i << "\t| ";
+		std::cout << contact[i].getFirstName() << "\t| ";
+		std::cout << contact[i].getLastName() << "\t| ";
+		std::cout << contact[i].getPhoneNumber() << "\t|\n";
 	}
 }
 
