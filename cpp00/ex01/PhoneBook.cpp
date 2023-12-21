@@ -14,7 +14,7 @@
 
 PhoneBook::PhoneBook(/* args */)
 {
-	this->index = 0;
+	this->_index = 0;
 }
 
 PhoneBook::~PhoneBook()
@@ -25,27 +25,27 @@ void	PhoneBook::printWholeContacts(void)
 	for (int i = 0; i < 8; i++)
 	{
 		std::cout << i << "\t| ";
-		std::cout << contact[i].getFirstName() << "\t| ";
-		std::cout << contact[i].getLastName() << "\t| ";
-		std::cout << contact[i].getPhoneNumber() << "\t|\n";
+		std::cout << _contact[i].getFirstName() << "\t| ";
+		std::cout << _contact[i].getLastName() << "\t| ";
+		std::cout << _contact[i].getPhoneNumber() << "\t|\n";
 	}
 }
 
 void	PhoneBook::addContacts(void)
 {
 	Contact	contact;
-	if (this->index == 8)
+	if (this->_index == 8)
 	{
-		this->index = 0;
+		this->_index = 0;
 		return ;
 	}
-	this->contact[this->index] = contact;
-	this->index++;
+	this->_contact[this->_index] = contact;
+	this->_index++;
 }
 
 void	PhoneBook::addInput(void)
 {
-	Contact *contact = &contact[index];
+	Contact *contact = &contact[_index];
 	contact->setFirstName("FirstName");
 	contact->setLastName("LastName");
 	contact->setPhoneNumber("PhoneNumber");
@@ -53,10 +53,13 @@ void	PhoneBook::addInput(void)
 
 }
 
-string	checkInput(string message)
+std::string	checkInput(string message)
 {
 	std::string	str;
-
+	// i = 0;
+	// while ( i < 8) {
+	// 	this->_contact.get
+	// }
 	std::cout << "Enter " << message << std::endl;
 	std::cout << ">> ";
 	getline(std::cin, str);

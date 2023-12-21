@@ -20,8 +20,8 @@
 class PhoneBook
 {
 	private:
-		Contact contact[8];
-		int index;
+		Contact _contact[8];
+		int _index;
 
 	public:
 		PhoneBook(void);
@@ -30,7 +30,7 @@ class PhoneBook
 		void	printWholeContacts(void);
 		void	addContacts(void);
 		void	addInput(void);
-		string	checkInput(string message);
+		std::string	checkInput(string message);
 
 };
 
