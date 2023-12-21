@@ -23,8 +23,7 @@ class Contact
 		string firstName;
 		string lastName;
 		string phoneNumber;
-		string emailAddress;
-		string notes;
+		string darkestSecret;
 
 	public:
 		Contact(void);
@@ -33,13 +32,11 @@ class Contact
 		string	getFirstName();
 		string	getLastName();
 		string	getPhoneNumber();
-		string	getEmailAddress();
+		string	getDarkestSecret();
 		void	Contact::setFirstName(string newFirstName);
 		void	Contact::setLastName(string newLastName);
 		void	setPhoneNumber(string newPhoneNum);
-		void	setEmailAddress(string newEmailAddr);
+		void	setDarkestSecret(string newDarkestSecret);
 };
-
-
 
 #endif // !CONTACT_HPP

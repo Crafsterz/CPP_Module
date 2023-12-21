@@ -34,9 +34,9 @@ std::string Contact::getPhoneNumber()
 	return (this->phoneNumber);
 }
 
-std::string Contact::getEmailAddress()
+std::string Contact::getDarkestSecret()
  {
-	return (this->emailAddress);
+	return (this->darkestSecret);
  }
 
 void	Contact::setFirstName(string newFirstName)
@@ -54,7 +54,7 @@ void	Contact::setPhoneNumber(string newPhoneNum)
 	this->phoneNumber = newPhoneNum;
 }
 
-void	Contact::setEmailAddress(string newEmailAddr)
+void	Contact::setDarkestSecret(string newDarkestSecret)
 {
-	this->emailAddress = newEmailAddr;
+	this->darkestSecret = newDarkestSecret;
 }
