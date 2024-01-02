@@ -46,10 +46,10 @@ void	PhoneBook::addContacts(void)
 void	PhoneBook::addInput(void)
 {
 	Contact *contact = &contact[_index];
-	contact->setFirstName("FirstName");
-	contact->setLastName("LastName");
-	contact->setPhoneNumber("PhoneNumber");
-	contact->setDarkestSecret("DarkestSecret");
+	contact->setFirstName(checkInput("FirstName"));
+	contact->setLastName(checkInput("LastName"));
+	contact->setPhoneNumber(checkInput("PhoneNumber"));
+	contact->setDarkestSecret(checkInput("DarkestSecret"));
 
 }
 
@@ -69,9 +69,26 @@ std::string	checkInput(string message)
 		std::cout << ">> ";
 		getline(std::cin, str);
 	}
-	for (int i = 0; i < str.size(); i++)
+	if (message == "PhoneNumber")
 	{
-		if (isalpha(str[i]))
-			std::cout << "" << std::endl;
+		for (int i = 0; i < str.size(); i++)
+		{
+			if (isdigit(str[i]))
+				std::cout << "" << std::endl;
+			else 
+				break ;	
+		}
+	}
+	else
+	{
+		for (int i = 0; i < str.size(); i++)
+		{
+			if (isalpha(str[i]))
+				std::cout << "" << std::endl;
+			else 
+				break ;
+		}
 	}
 }
+
+
