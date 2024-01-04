@@ -53,7 +53,7 @@ void	PhoneBook::addInput(void)
 
 }
 
-std::string	checkInput(string message)
+string	checkInput(string message)
 {
 	std::string	str;
 	// i = 0;
@@ -91,4 +91,41 @@ std::string	checkInput(string message)
 	}
 }
 
+int	checkPhoneNumber(string text)
+{
+	if (text.size() > 10)
+		return (1);
+	for (int i = 0; i < text.size(); i++)
+	{
+		if (isspace(text[i]))
+			return (1);
+	}
+	for (int i = 0; i < text.size(); i++)
+	{
+		if (!isdigit(text[i]))
+			return (1);
+	}
+	return (0);
+}
 
+int checkName(string text)
+{
+	for (int i = 0; i < text.size(); i++)
+	{
+		if (!isalpha(text[i]))
+			return (1);
+	
+	}
+	return (0);
+}
+
+int	checkDarkSecret(string text)
+{
+	for (int i = 0; i < text.size(); i++)
+	{
+		if (!isprint(text[i]))
+			return (1);
+		
+	}
+	return (0);
+}

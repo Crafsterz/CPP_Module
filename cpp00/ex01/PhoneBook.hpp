@@ -16,6 +16,8 @@
 # include "Contact.hpp"
 # include <iostream>
 # include <string>
+# include <cctype>
+using std::string;
 
 class PhoneBook
 {
@@ -30,7 +32,10 @@ class PhoneBook
 		void	printWholeContacts(void);
 		void	addContacts(void);
 		void	addInput(void);
-		std::string	checkInput(string message);
+		string	checkInput(string message);
+		int		checkPhoneNumber(string text);
+		int 	checkName(string text);
+		int		checkDarkSecret(string text);
 
 };
 
