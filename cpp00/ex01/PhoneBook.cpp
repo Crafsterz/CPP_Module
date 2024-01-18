@@ -59,7 +59,7 @@ void	PhoneBook::addContacts(void)
 
 void	PhoneBook::addInput(void)
 {
-	Contact *contact = &contact[_index];
+	Contact *contact = &_contact[_index];
 	contact->setFirstName(checkInput("FirstName"));
 	contact->setLastName(checkInput("LastName"));
   contact->setNickName(checkInput("NickName"));

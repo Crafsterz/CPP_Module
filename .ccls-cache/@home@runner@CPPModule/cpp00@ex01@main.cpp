@@ -25,9 +25,11 @@ int	main(void)
 	while (input != "EXIT")
 	{
 		if (input == "ADD")
+    {
 			std::cout << "add" << std::endl;
       phonebook.addInput();
       phonebook.addContacts(); 
+    }
 		else if (input == "SEARCH")
 		{
 			std::cout << "search" << std::endl;

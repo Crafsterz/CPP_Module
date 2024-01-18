@@ -32,10 +32,10 @@ class PhoneBook
     void	printWholeContacts(void);
     void	addContacts(void);
     void	addInput(void);
-		string	PhoneBook::checkInput(string message);
-		int		PhoneBook::checkPhoneNumber(string text);
-		int 	PhoneBook::checkName(string text);
-		int		PhoneBook::checkDarkSecret(string text);
+		string	checkInput(string message);
+		int		checkPhoneNumber(string text);
+		int 	checkName(string text);
+		int		checkDarkSecret(string text);
     void  checkLength(int size);
 
 };
