@@ -35,11 +35,11 @@ class Contact
     string  getNickName();
 		string	getPhoneNumber();
 		string	getDarkestSecret();
-		void	Contact::setFirstName(string newFirstName);
-		void	Contact::setLastName(string newLastName);
-    void	Contact::setNickName(string newNickName);
-		void	Contact::setPhoneNumber(string newPhoneNum);
-		void	Contact::setDarkestSecret(string newDarkestSecret);
+		void	setFirstName(string newFirstName);
+		void	setLastName(string newLastName);
+    void	setNickName(string newNickName);
+		void	setPhoneNumber(string newPhoneNum);
+		void	setDarkestSecret(string newDarkestSecret);
 };
 
 #endif // !CONTACT_HPP

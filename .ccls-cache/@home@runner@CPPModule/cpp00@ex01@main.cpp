@@ -36,12 +36,9 @@ int	main(void)
 			std::cout << "Index\t| First Name\t | Last Name\t | Nickname\t" << std::endl;
 			//printWholeContacts
 		}
-		else
-		{
-			std::cout << "Type 'ADD' to add new contacts" << std::endl;
-			std::cout << "Type 'SEARCH' to display all the contacts" << std::endl;
-			std::cout << "Type 'EXIT' to end the program" << std::endl;
-		}
+    std::cout << "Type 'ADD' to add new contacts" << std::endl;
+    std::cout << "Type 'SEARCH' to display all the contacts" << std::endl;
+    std::cout << "Type 'EXIT' to end the program" << std::endl;
 		std::cout << "Input: ";
 		std::cin >> input;
 	}
