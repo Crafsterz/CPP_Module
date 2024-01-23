@@ -12,33 +12,33 @@
 
 #include "PhoneBook.hpp"
 
-PhoneBook::PhoneBook(/* args */) { this->_index = 0; }
+PhoneBook::PhoneBook(/* args */) { this->_index = 8; }
 
 PhoneBook::~PhoneBook() {}
 
 void PhoneBook::checkLength(int size) {
-  if (size > 10)
-    std::cout << ".\t";
+  if (size >= 10)
+    std::cout << ".\t\t| ";
   else
-    std::cout << "\t";
+    std::cout << "\t\t| ";
 }
 
-void PhoneBook::printWholeContacts(void) {
+void PhoneBook::printWholeContacts(void) 
+{
   for (int i = 0; i < 8; i++) {
-    std::cout << i << "\t| ";
-    std::cout << _contact[i].getFirstName().substr(0, 10);
+    std::cout << i << "\t\t| ";
+    std::cout << std::setw(10) << _contact[i].getFirstName().substr(0, 10);
     checkLength(_contact[i].getFirstName().size());
-    std::cout << _contact[i].getLastName().substr(0, 10);
-    checkLength(_contact[i].getLastName().size());
-    std::cout << _contact[i].getNickName().substr(0, 10);
-    checkLength(_contact[i].getNickName().size());
-    std::cout << _contact[i].getPhoneNumber().substr(0, 10);
-    checkLength(_contact[i].getFirstName().size());
+    // std::cout << std::setw(10) << _contact[i].getLastName().substr(0, 10);
+    // checkLength(_contact[i].getLastName().size());
+    // std::cout << std::setw(10) << _contact[i].getNickName().substr(0, 10);
+    // checkLength(_contact[i].getNickName().size());
     std::cout << std::endl;
   }
 }
 
-void PhoneBook::addContacts(void) {
+void PhoneBook::addContacts(void) 
+{
   Contact contact;
   if (this->_index == 8) {
     this->_index = 0;
@@ -51,46 +51,77 @@ void PhoneBook::addContacts(void) {
 void PhoneBook::addInput(void) {
   Contact *contact = &_contact[_index];
   contact->setFirstName(checkInput("FirstName"));
-  contact->setLastName(checkInput("LastName"));
-  contact->setNickName(checkInput("NickName"));
-  contact->setPhoneNumber(checkInput("PhoneNumber"));
-  contact->setDarkestSecret(checkInput("DarkestSecret"));
+  // contact->setLastName(checkInput("LastName"));
+  // contact->setNickName(checkInput("NickName"));
+  // contact->setPhoneNumber(checkInput("PhoneNumber"));
+  // contact->setDarkestSecret(checkInput("DarkestSecret"));
 }
 
-int PhoneBook::checkPhoneNumber(string text) {
-  if (text.size() > 10) {
-    std::cout << "Error: Too many numbers\n";
+int PhoneBook::checkPhoneNumber(string text) 
+{
+  if (text.empty()) 
+  {
+    std::cout << "Input is empty" << std::endl;
+    std::cout << ">> ";
     return (1);
   }
-  for (size_t i = 0; i < text.size(); i++) {
+  if (text.size() > 10) 
+  {
+    std::cout << "Error: Too many numbers\n";
+    std::cout << ">> ";
+    return (1);
+  }
+  for (size_t i = 0; i < text.size(); i++) 
+  {
     if (isspace(text[i])) {
 
       std::cout << "Error: There are spaces\n";
+      std::cout << ">> ";
       return (1);
     }
   }
-  for (size_t i = 0; i < text.size(); i++) {
+  for (size_t i = 0; i < text.size(); i++) 
+  {
     if (!isdigit(text[i])) {
       std::cout << "Error: They are not numbers\n";
+      std::cout << ">> ";
       return (1);
     }
   }
   return (0);
 }
 
-int PhoneBook::checkName(string text) {
-  for (size_t i = 0; i < text.size(); i++) {
+int PhoneBook::checkName(string text) 
+{
+  if (text.empty()) 
+    {
+      std::cout << "Input is empty" << std::endl;
+      std::cout << ">> ";
+      return (1);
+    }
+  for (size_t i = 0; i < text.size(); i++) 
+  {
     if (!isalpha(text[i]) && !isspace(text[i])) {
       std::cout << "Error: They are not letters\n";
+      std::cout << ">> ";
       return (1);
     }
   }
   return (0);
 }
 
-int PhoneBook::checkDarkSecret(string text) {
-  for (size_t i = 0; i < text.size(); i++) {
-    if (!isprint(text[i])) {
+int PhoneBook::checkDarkSecret(string text) 
+{
+  if (text.empty()) 
+  {
+    std::cout << "Input is empty" << std::endl;
+    std::cout << ">> ";
+    return (1);
+  }
+  for (size_t i = 0; i < text.size(); i++) 
+  {
+    if (!isprint(text[i])) 
+    {
       std::cout << "Error: They are not printable characters\n";
       return (1);
     }
@@ -98,7 +129,8 @@ int PhoneBook::checkDarkSecret(string text) {
   return (0);
 }
 
-string PhoneBook::checkInput(string message) {
+string PhoneBook::checkInput(string message) 
+{
   std::string input;
 
   std::cout << "Enter " << message << std::endl;
@@ -109,14 +141,15 @@ string PhoneBook::checkInput(string message) {
     std::cout << "Input is empty" << std::endl;
     std::cout << ">> ";
     std::getline(std::cin, input);
-    // if (!input.empty()) 
-    //   break;
   }
   if (message == "PhoneNumber")
-    while (checkPhoneNumber(input) == 1);
+    while (checkPhoneNumber(input) == 1)
+      std::getline(std::cin, input);
   else if (message == "FirstName" || message == "LastName")
-    while (checkName(input) == 1);
+    while (checkName(input) == 1)
+      std::getline(std::cin, input);
   else if (message == "DarkestSecret" || message == "NickName")
-    while (checkDarkSecret(input) == 1);
+    while (checkDarkSecret(input) == 1)
+      std::getline(std::cin, input);
   return (input);
 }

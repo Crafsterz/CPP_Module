@@ -4,7 +4,7 @@ HEADERS = PhoneBook.hpp Contact.hpp
 OBJ_DIR = obj
 OBJ = $(addprefix $(OBJ_DIR)/, $(SRC:.cpp=.o))
 
-CC = g++
+CC = c++
 CFLAGS = -Wall -Werror -Wextra -std=c++98 -fsanitize=address -g3
 
 $(OBJ_DIR)/%.o: %.cpp

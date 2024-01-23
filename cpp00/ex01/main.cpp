@@ -27,14 +27,14 @@ int	main(void)
 		if (input == "ADD")
     {
 			std::cout << "add" << std::endl;
-      phonebook.addInput();
       phonebook.addContacts(); 
+      phonebook.addInput();
     }
 		else if (input == "SEARCH")
 		{
 			std::cout << "search" << std::endl;
-			std::cout << "Index\t| First Name\t | Last Name\t | Nickname\t" << std::endl;
-			//printWholeContacts
+			std::cout << "Index \t| First Name \t\t| Last Name \t\t| Nickname \t\t\t|" << std::endl;
+			phonebook.printWholeContacts();
 		}
     std::cout << "Type 'ADD' to add new contacts" << std::endl;
     std::cout << "Type 'SEARCH' to display all the contacts" << std::endl;

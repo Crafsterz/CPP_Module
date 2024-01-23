@@ -56,7 +56,7 @@ void	Contact::setLastName(string newLastName)
 
 void	Contact::setNickName(string newNickName)
 {
-  this->lastName = newNickName;
+  this->nickName = newNickName;
 }
 
 void	Contact::setPhoneNumber(string newPhoneNum)
