@@ -31,7 +31,7 @@ class PhoneBook
 		~PhoneBook(void);
 
     void	printWholeContacts(void);
-    void	addContacts(void);
+    // void	addContacts(void);
     void	addInput(void);
 		string	checkInput(string message);
 		int		checkPhoneNumber(string text);

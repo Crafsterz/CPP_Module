@@ -26,8 +26,8 @@ int	main(void)
 	{
 		if (input == "ADD")
     {
-			std::cout << "add" << std::endl;
-      phonebook.addContacts(); 
+			// std::cout << "add" << std::endl;
+      // phonebook.addContacts(); 
       phonebook.addInput();
     }
 		else if (input == "SEARCH")

@@ -37,24 +37,28 @@ void PhoneBook::printWholeContacts(void)
   }
 }
 
-void PhoneBook::addContacts(void) 
-{
-  Contact contact;
-  if (this->_index == 8) {
-    this->_index = 0;
-    return;
-  }
-  this->_contact[this->_index] = contact;
-  this->_index++;
-}
+// void PhoneBook::addContacts(void) 
+// {
+//   // Contact contact;
+//   if (this->_index == 8) {
+//     this->_index = 0;
+//     return;
+//   }
+//   // this->_contact[this->_index] = contact;
+//   this->_index++;
+// }
 
 void PhoneBook::addInput(void) {
+  if (this->_index == 8) {
+    this->_index = 0;
+  }
   Contact *contact = &_contact[_index];
   contact->setFirstName(checkInput("FirstName"));
   // contact->setLastName(checkInput("LastName"));
   // contact->setNickName(checkInput("NickName"));
   // contact->setPhoneNumber(checkInput("PhoneNumber"));
   // contact->setDarkestSecret(checkInput("DarkestSecret"));
+  this->_index++;
 }
 
 int PhoneBook::checkPhoneNumber(string text) 
@@ -135,12 +139,16 @@ string PhoneBook::checkInput(string message)
 
   std::cout << "Enter " << message << std::endl;
   std::cout << ">> ";
-  std::getline(std::cin, input);
+  // std::getline(std::cin, input);
+  std::cin>>input;
+ 
   while (input.empty()) 
   {
+    
+    std::getline(std::cin, input);
+    
     std::cout << "Input is empty" << std::endl;
     std::cout << ">> ";
-    std::getline(std::cin, input);
   }
   if (message == "PhoneNumber")
     while (checkPhoneNumber(input) == 1)
