@@ -10,11 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#include <string>
 #include "PhoneBook.hpp"
-#include <iostream>
-using std::string;
 
 int	main(void)
 {
@@ -23,13 +19,9 @@ int	main(void)
 
 	input = "";
 	while (input != "EXIT")
-	{
 		if (input == "ADD")
     {
-			// std::cout << "add" << std::endl;
-      // phonebook.addContacts(); 
       phonebook.addInput();
-    }
 		else if (input == "SEARCH")
 		{
 			std::cout << "search" << std::endl;
