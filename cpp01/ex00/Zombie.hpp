@@ -17,8 +17,8 @@ class Zombie
     ~Zombie(void);
       
     void    announce(void);
-    Zombie* newZombie(string name);
-    void    randChump(string name);
     
 };
+  Zombie* newZombie(string name);
+  void    randChump(string name);
 #endif

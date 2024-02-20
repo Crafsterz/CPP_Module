@@ -9,3 +9,6 @@ void Zombie::announce(void)
   cout << ": BraiiiiiiinnnzzzZ..." << endl;
 }
 
+Zombie* newZombie( std::string name );
+
+void randomChump( std::string name );
