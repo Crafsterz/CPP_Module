@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mukhairu <mukhairu@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mukhairu <mukhairu@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 16:49:56 by mukhairu          #+#    #+#             */
-/*   Updated: 2023/12/04 19:11:05 by mukhairu         ###   ########.fr       */
+/*   Updated: 2024/02/21 12:26:21 by mukhairu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,12 @@ class Contact
 
 		string	getFirstName();
 		string	getLastName();
-    string  getNickName();
+		string  getNickName();
 		string	getPhoneNumber();
 		string	getDarkestSecret();
 		void	setFirstName(string newFirstName);
 		void	setLastName(string newLastName);
-    void	setNickName(string newNickName);
+		void	setNickName(string newNickName);
 		void	setPhoneNumber(string newPhoneNum);
 		void	setDarkestSecret(string newDarkestSecret);
 };
