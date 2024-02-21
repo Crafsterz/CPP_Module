@@ -1,5 +1,5 @@
 NAME = moar
-SRC = main.cpp zombieHorde.cpp Zombie.cpp;
+SRC = main.cpp zombieHorde.cpp Zombie.cpp
 HEADERS = Zombie.hpp
 OBJ_DIR = obj
 OBJ = $(addprefix $(OBJ_DIR)/, $(SRC:.cpp=.o))
