@@ -25,10 +25,10 @@ int main()
 		bob.attack();
 	}
 	{
-		Weapon club = Weapon("crude spiked club");
+		Weapon club = Weapon("round club");
 		
 		HumanB jim("Jim");
-		jim.setWeapon(club);
+		// jim.setWeapon(club);
 		jim.attack();
 		club.setType("some other type of club");
 		jim.attack();

@@ -23,7 +23,7 @@ class Weapon
 		string	type;
 		
 	public:
-		Weapon::Weapon(string type);
+		Weapon(string type);
 		~Weapon(void);
 		string	getType();
 		void	setType(string newType);

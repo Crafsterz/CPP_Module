@@ -12,12 +12,23 @@
 
 #include "HumanB.hpp"
 
-HumanB::HumanB(string name)
+HumanB::HumanB(string name) : name(name)
 {
-	this->name = name;
 }
 
 HumanB::~HumanB(void)
 {
 }
 
+void HumanB::attack()
+{
+  if (this->type == NULL || this->type->getType() == "")
+    cout << name << " has no weapon " << endl;
+  else
+    cout << name << " attacks with a " << type->getType() << endl;
+}
+
+void HumanB::setWeapon(Weapon& type)
+{
+  this->type = &type;
+}

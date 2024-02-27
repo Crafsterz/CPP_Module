@@ -1,4 +1,4 @@
-NAME = moar
+NAME = Weps
 SRC = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 HEADERS = Weapon.hpp HumanA.hpp HumanB.hpp
 OBJ_DIR = obj

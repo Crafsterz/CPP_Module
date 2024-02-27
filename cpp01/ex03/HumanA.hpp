@@ -17,6 +17,8 @@
 # include <iostream>
 # include <string>
 using std::string;
+using std::cout;
+using std::endl;
 
 class HumanA
 {
@@ -26,7 +28,7 @@ private:
 public:
 	HumanA( string name, Weapon &club );
 	~HumanA(void);
-	string	attack();
+	void	attack();
 };
 
 

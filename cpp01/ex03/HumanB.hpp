@@ -17,16 +17,19 @@
 # include <iostream>
 # include <string>
 using std::string;
+using std::cout;
+using std::endl;
 
 class HumanB
 {
 private:
 	string	name;
-	Weapon	*type;
+	Weapon*	type;
 public:
 	HumanB(string name);
 	~HumanB(void);
-	// string	attack();
+	void	attack();
+  void setWeapon(Weapon &type);
 };
 
 
