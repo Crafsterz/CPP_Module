@@ -1,37 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   main2.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mukhairu <mukhairu@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/22 16:36:20 by mukhairu          #+#    #+#             */
-/*   Updated: 2024/02/28 12:04:53 by mukhairu         ###   ########.fr       */
+/*   Created: 2024/02/28 14:14:36 by mukhairu          #+#    #+#             */
+/*   Updated: 2024/02/28 16:24:58 by mukhairu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
-#include "HumanA.hpp"
-#include "HumanB.hpp"
+#include "Sed.hpp"
 
-int main()
+// try to make a prog read from file a write to file b
+int	main(void)
 {
-	{
-		Weapon club = Weapon("crude spiked club");
+	string		fileName = "TEST";
+	ifstream	ifs(fileName);
+	
+	ofstream	ofs("out.replace");
+	string		s1, s2;
+	string		buffer;
 
-		HumanA bob("Bob", club);
-		bob.attack();
-		club.setType("some other type of club");
-		bob.attack();
-	}
+	s1 = "what";
+	s2 = "tahw";
+
+	if (!ifs)
 	{
-		Weapon club = Weapon("round club");
-		
-		HumanB jim("Jim");
-		// jim.setWeapon(club);
-		jim.attack();
-		club.setType("some other type of club");
-		jim.attack();
+		std::cerr << "Error opening input file" << endl;
+		return (1);
 	}
-	return 0;
+	while (getline(ifs, buffer))
+		ofs << buffer << endl;
+	ifs.close();
+	ofs.close();
+	
+	return (0);
 }
