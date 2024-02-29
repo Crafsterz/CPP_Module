@@ -1,4 +1,4 @@
-#ifndefine HARL_HPP
+#ifndef HARL_HPP
 # define HARL_HPP
 # include <iostream>
 # include <string>
@@ -19,8 +19,8 @@ class Harl
     ~Harl(void);
     void  complain(string level);
 
-}
+};
 
 typedef void (Harl::*t_func) ( void );
 
-#end
+#endif

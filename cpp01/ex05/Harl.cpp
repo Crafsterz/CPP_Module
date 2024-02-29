@@ -26,7 +26,7 @@ void	Harl::error(void)
   cout << "UNSOLVABLE! The calculations and each permusable factor are wrong!" << endl;
 }
 
-void complain(string level)
+void Harl::complain(string level)
 {
   t_func funcs[] = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
   string levels[] = {"debug", "info", "warning", "error"};
