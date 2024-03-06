@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mukhairu <mukhairu@student.42kl.edu.my>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/03/06 15:38:59 by mukhairu          #+#    #+#             */
+/*   Updated: 2024/03/06 15:47:01 by mukhairu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef HARL_HPP
 # define HARL_HPP
 # include <iostream>
@@ -20,7 +32,5 @@ class Harl
     void  complain(string level);
 
 };
-
-typedef void (Harl::*t_func) ( void );
 
 #endif

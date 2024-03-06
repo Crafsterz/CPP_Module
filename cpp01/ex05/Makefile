@@ -1,4 +1,4 @@
-NAME = Weps
+NAME = Harl
 SRC = main.cpp Harl.cpp 
 HEADERS = Harl.hpp 
 OBJ_DIR = obj
